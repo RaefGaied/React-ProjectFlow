@@ -412,7 +412,7 @@ const [showStats, setShowStats] = useState(false);
 *Formulaire vide prêt à être rempli*
 
 #### Après validation
-![Après soumission](./screenshots/apres_soumission.png)
+![Après soumission](./screenshots/aprés_soumission.png)
 *Projet ajouté avec succès à la liste*
 
 ---
