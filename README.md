@@ -462,7 +462,7 @@ const [showStats, setShowStats] = useState(false);
 *Résultats de recherche filtrés par titre du projet*
 
 #### Recherche par description
-![Recherche par description](./screenshots/recherche_par_description.png)
+![Recherche par description](./screenshots/recherche_par_descriptionpng.png)
 *Résultats de recherche filtrés par description du projet*
 
 ---
