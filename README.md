@@ -1,4 +1,4 @@
-# 📋 Gestionnaire de Projets - Application React Complète
+#  Gestionnaire de Projets - Application React Complète
 
 Application React professionnelle de gestion de projets démontrant la maîtrise complète des trois hooks essentiels de React : **`useState`**, **`useEffect`** et **`useReducer`**.
 
@@ -6,7 +6,7 @@ Application React professionnelle de gestion de projets démontrant la maîtrise
 
 ---
 
-## 🎯 Objectifs Pédagogiques
+## Objectifs Pédagogiques
 
 Ce projet applique intégralement les concepts du cours MERN Semaine 7 :
 
@@ -18,38 +18,38 @@ Ce projet applique intégralement les concepts du cours MERN Semaine 7 :
 
 ---
 
-## ✨ Fonctionnalités Complètes
+## Fonctionnalités Complètes
 
-### 🎯 Gestion des Projets (useReducer)
-- ✅ **Ajouter** un projet avec titre, description et deadline
-- ✅ **Modifier** un projet existant
-- ✅ **Supprimer** un projet (avec nettoyage des timers)
-- ✅ **Changer le statut** : À faire → En cours → Terminé
+### Gestion des Projets (useReducer)
+- **Ajouter** un projet avec titre, description et deadline
+- **Modifier** un projet existant
+- **Supprimer** un projet (avec nettoyage des timers)
+- **Changer le statut** : À faire → En cours → Terminé
 
-### 🔍 Filtres et Recherche (useState)
-- ✅ **Recherche** en temps réel dans titre et description
-- ✅ **Filtrage** par statut (Tous / À faire / En cours / Terminé)
-- ✅ **Tri** par deadline ou par titre
+### Filtres et Recherche (useState)
+- **Recherche** en temps réel dans titre et description
+- **Filtrage** par statut (Tous / À faire / En cours / Terminé)
+- **Tri** par deadline ou par titre
 
-### ⏱️ Timer Pomodoro (useEffect + useReducer)
-- ✅ Timer **25 minutes** par projet
-- ✅ **Démarrer / Pause / Reprendre** le timer
-- ✅ **Réinitialiser** le timer
-- ✅ Gestion automatique des intervals avec nettoyage
+###  Timer Pomodoro (useEffect + useReducer)
+- Timer **25 minutes** par projet
+- **Démarrer / Pause / Reprendre** le timer
+- **Réinitialiser** le timer
+- Gestion automatique des intervals avec nettoyage
 
-### 📊 Statistiques Visuelles (useState + useReducer)
-- ✅ Nombre **total** de projets
-- ✅ Répartition par **statut** (À faire, En cours, Terminé)
-- ✅ Affichage/Masquage des statistiques
+### Statistiques Visuelles (useState + useReducer)
+- Nombre **total** de projets
+- Répartition par **statut** (À faire, En cours, Terminé)
+- Affichage/Masquage des statistiques
 
-### 💾 Persistance des Données (useEffect)
-- ✅ Sauvegarde **automatique** dans localStorage
-- ✅ Chargement au **démarrage** de l'application
-- ✅ Synchronisation en **temps réel**
+### Persistance des Données (useEffect)
+- Sauvegarde **automatique** dans localStorage
+- Chargement au **démarrage** de l'application
+- Synchronisation en **temps réel**
 
 ---
 
-## 🛠️ Installation et Démarrage
+## Installation et Démarrage
 
 ### Prérequis
 - Node.js 16+ et npm
@@ -69,7 +69,7 @@ npm run dev
 
 ---
 
-## 📁 Structure du Projet (Refactorisée)
+## Structure du Projet (Refactorisée)
 
 ```
 src/
@@ -103,7 +103,7 @@ src/
 └── main.jsx                       # Configuration React
 ```
 
-### 🏗️ Avantages de cette Architecture
+###  Avantages de cette Architecture
 
 - **Séparation des responsabilités** : Chaque composant a une seule responsabilité
 - **Réutilisabilité** : Les composants peuvent être réutilisés facilement
@@ -113,17 +113,17 @@ src/
 
 ---
 
-## 🧠 Explication Détaillée du Reducer (useReducer)
+## Explication Détaillée du Reducer (useReducer)
 
-### 📍 Localisation
+### Localisation
 **Fichier** : `src/hooks/useProjectReducer.js`
 
-### 🎯 Rôle du Reducer
+### Rôle du Reducer
 Le reducer est le **cœur** de la gestion d'état. Il centralise toute la logique métier et garantit les transitions d'état prévisibles et immuables.
 
-### 📋 Tous les Cas du Reducer
+###  Tous les Cas du Reducer
 
-#### 1️⃣ **ADD_PROJECT** - Ajouter un projet
+#### 1️**ADD_PROJECT** - Ajouter un projet
 ```javascript
 case 'ADD_PROJECT':
   return {
@@ -141,7 +141,7 @@ case 'ADD_PROJECT':
 **Quand** : Lors de la soumission du formulaire  
 **Immutabilité** : Création d'un nouveau tableau avec spread operator
 
-#### 2️⃣ **UPDATE_PROJECT_STATUS** - Changer le statut
+#### 2️**UPDATE_PROJECT_STATUS** - Changer le statut
 ```javascript
 case 'UPDATE_PROJECT_STATUS':
   return {
@@ -156,7 +156,7 @@ case 'UPDATE_PROJECT_STATUS':
 **Quand** : Changement du statut (todo → doing → done)  
 **Immutabilité** : Utilisation de `.map()` pour créer un nouveau tableau
 
-#### 3️⃣ **DELETE_PROJECT** - Supprimer un projet
+#### 3️**DELETE_PROJECT** - Supprimer un projet
 ```javascript
 case 'DELETE_PROJECT':
   return {
@@ -175,7 +175,7 @@ case 'DELETE_PROJECT':
 **Immutabilité** : Utilisation de `.filter()` pour exclure  
 **Bonus** : Nettoyage automatique des timers associés
 
-#### 4️⃣ **EDIT_PROJECT** - Modifier un projet
+#### 4️ **EDIT_PROJECT** - Modifier un projet
 ```javascript
 case 'EDIT_PROJECT':
   return {
@@ -195,7 +195,7 @@ case 'EDIT_PROJECT':
 **Quand** : Modification des informations d'un projet  
 **Immutabilité** : Spread operator pour fusionner les changements
 
-#### 5️⃣ **SET_FILTER** - Appliquer les filtres
+#### 5️ **SET_FILTER** - Appliquer les filtres
 ```javascript
 case 'SET_FILTER':
   return {
@@ -209,7 +209,7 @@ case 'SET_FILTER':
 **Quand** : Changement de filtre, tri ou recherche  
 **Clé dynamique** : Permet de mettre à jour n'importe quel filtre
 
-#### 6️⃣ **LOAD_PROJECTS** - Charger depuis localStorage
+#### 6️ **LOAD_PROJECTS** - Charger depuis localStorage
 ```javascript
 case 'LOAD_PROJECTS':
   return {
@@ -220,7 +220,7 @@ case 'LOAD_PROJECTS':
 **Quand** : Au démarrage de l'application (via useEffect)  
 **Utilité** : Restaurer les données persistées
 
-#### 7️⃣ **UPDATE_TIMER** - Gérer les timers Pomodoro
+#### 7️**UPDATE_TIMER** - Gérer les timers Pomodoro
 ```javascript
 case 'UPDATE_TIMER':
   return {
@@ -234,7 +234,7 @@ case 'UPDATE_TIMER':
 **Quand** : Démarrage, pause, réinitialisation du timer  
 **Clé** : Format `project-{id}-pomodoro`
 
-### 🔐 Principe d'Immutabilité
+###  Principe d'Immutabilité
 
 **L'immutabilité est CRUCIALE en React !**
 
@@ -247,17 +247,17 @@ case 'UPDATE_TIMER':
 
 ---
 
-## ⚡ Explication Détaillée des useEffect
+## Explication Détaillée des useEffect
 
-### 📍 Localisation
+### Localisation
 **Fichier** : `src/hooks/useProjectEffects.js`
 
-### 🎯 Rôle des useEffect
+### Rôle des useEffect
 Les useEffect gèrent les **effets de bord** : localStorage, timers, abonnements, etc.
 
-### 📋 Tous les useEffect Implémentés
+### Tous les useEffect Implémentés
 
-#### 1️⃣ **useLocalStorageEffect** - Chargement au montage
+#### 1️ **useLocalStorageEffect** - Chargement au montage
 ```javascript
 useEffect(() => {
   const savedProjects = localStorage.getItem('projects');
@@ -277,7 +277,7 @@ useEffect(() => {
 **Rôle** : Restaurer les projets sauvegardés  
 **Gestion d'erreur** : Try/catch pour JSON.parse()
 
-#### 2️⃣ **useLocalStorageEffect** - Sauvegarde automatique
+#### 2️**useLocalStorageEffect** - Sauvegarde automatique
 ```javascript
 useEffect(() => {
   if (projects.length > 0) {
@@ -291,7 +291,7 @@ useEffect(() => {
 **Rôle** : Persister les données automatiquement  
 **Condition** : Sauvegarde seulement si projets non vides
 
-#### 3️⃣ **useTimerEffect** - Gestion des timers Pomodoro
+#### 3️**useTimerEffect** - Gestion des timers Pomodoro
 ```javascript
 useEffect(() => {
   const intervals = Object.entries(timers).map(([key, timerData]) => {
@@ -313,7 +313,7 @@ useEffect(() => {
     return null;
   }).filter(Boolean);  // Filtrer les null
 
-  // ✅ NETTOYAGE CRUCIAL : Arrêter les intervals
+  // NETTOYAGE CRUCIAL : Arrêter les intervals
   return () => {
     intervals.forEach(interval => clearInterval(interval));
   };
@@ -326,7 +326,7 @@ useEffect(() => {
 **Nettoyage** : Arrêter les intervals pour éviter les fuites mémoire  
 **Fréquence** : Chaque 1 seconde via `setInterval`
 
-### 🔄 Cycle de Vie des useEffect
+###  Cycle de Vie des useEffect
 
 ```
 Montage du composant
@@ -342,7 +342,7 @@ Démontage du composant
 Fonction de nettoyage (return) → Exécution
 ```
 
-### 🚨 Pièges Courants et Solutions
+### Pièges Courants et Solutions
 
 | Piège | Symptôme | Solution |
 |-------|----------|----------|
@@ -353,14 +353,14 @@ Fonction de nettoyage (return) → Exécution
 
 ---
 
-## 🎨 Utilisation de useState
+##  Utilisation de useState
 
-### 📍 Localisation
+###  Localisation
 **Fichier** : `src/components/ProjectManager.jsx`
 
-### 📋 Tous les useState Utilisés
+### Tous les useState Utilisés
 
-#### 1️⃣ **formData** - État du formulaire
+#### 1️**formData** - État du formulaire
 ```javascript
 const [formData, setFormData] = useState({
   title: '',
@@ -371,21 +371,21 @@ const [formData, setFormData] = useState({
 **Utilité** : Stocker les valeurs du formulaire d'ajout/modification  
 **Composant** : `ProjectForm.jsx`
 
-#### 2️⃣ **editingProject** - Projet en édition
+#### 2️**editingProject** - Projet en édition
 ```javascript
 const [editingProject, setEditingProject] = useState(null);
 ```
 **Utilité** : Savoir quel projet est en cours de modification  
 **Valeur** : `null` (aucun) ou objet projet
 
-#### 3️⃣ **showStats** - Affichage des statistiques
+#### 3️**showStats** - Affichage des statistiques
 ```javascript
 const [showStats, setShowStats] = useState(false);
 ```
 **Utilité** : Afficher/masquer les statistiques  
 **Composant** : `Statistics.jsx`
 
-### 📊 Tableau Comparatif des Trois Hooks
+### Tableau Comparatif des Trois Hooks
 
 | Aspect | useState | useEffect | useReducer |
 |--------|----------|-----------|-----------|
@@ -397,7 +397,7 @@ const [showStats, setShowStats] = useState(false);
 
 ---
 
-## 📸 Captures d'écran - Démonstration Complète
+##  Captures d'écran - Démonstration Complète
 
 ### 1. **Page d'accueil / Liste de projets**
 ![Page d'accueil](./screenshots/pageAcceuil.png)
@@ -481,19 +481,19 @@ const [showStats, setShowStats] = useState(false);
 
 ### 8. **Gestion via useReducer**
 *Les captures précédentes démontrent :*
-- ✅ **Ajout de projet** : Voir "Après soumission"
-- ✅ **Changement de statut** : Visible dans les filtres par statut
-- ✅ **Suppression** : Bouton "Supprimer" visible sur chaque carte
+- **Ajout de projet** : Voir "Après soumission"
+- **Changement de statut** : Visible dans les filtres par statut
+- **Suppression** : Bouton "Supprimer" visible sur chaque carte
 
 ---
 
-## 🏆 Livrables Finaux
+## Livrables Finaux
 
-- ✅ **Code source** : Complet et fonctionnel
-- ✅ **Captures d'écran** : Toutes les fonctionnalités
-- ✅ **Explication reducer** : Tous les cas détaillés
-- ✅ **Explication useEffect** : Chaque effect expliqué
-- ✅ **README** : Documentation complète (ce fichier)
+- **Code source** : Complet et fonctionnel
+- **Captures d'écran** : Toutes les fonctionnalités
+- **Explication reducer** : Tous les cas détaillés
+- **Explication useEffect** : Chaque effect expliqué
+- **README** : Documentation complète (ce fichier)
 
 
 
@@ -509,7 +509,7 @@ const [showStats, setShowStats] = useState(false);
 
 ---
 
-## 📚 Ressources
+## Ressources
 
 - [Documentation React Hooks](https://react.dev/reference/react)
 - [MDN - localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
@@ -520,4 +520,4 @@ const [showStats, setShowStats] = useState(false);
 **Développé avec ❤️ en React + Vite**  
 **Cours MERN - Semaine 7 : Maîtriser les Hooks Essentiels**  
 **Hooks : useState | useEffect | useReducer**  
-**Projet Final - 20% de la note**
+
